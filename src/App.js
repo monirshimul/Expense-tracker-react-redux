@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './IncomeExpense/components/Header'
+import { Balance } from './IncomeExpense/components/Balance'
+import { IncomeExpences } from './IncomeExpense/components/IncomeExpences'
+import { TransactionList } from './IncomeExpense/components/TransactionList'
+import { AddTransaction } from './IncomeExpense/components/AddTransaction';
+
+
+
+
+const state = {
+  title: "Expense Tracker"
+}
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header title={state.title} />
+      <Balance />
+      <IncomeExpences />
+      <TransactionList />
+      <AddTransaction />
+
+
     </div>
+
   );
 }
 
